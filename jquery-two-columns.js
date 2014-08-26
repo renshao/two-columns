@@ -15,7 +15,7 @@
 
 $.fn.twoColumns = function() {
   var columnWidths = this.attr('columns').split(/\|/);
-  var left = columnWidths[0], right = parseInt(columnWidths[1]);
+  var left = parseFloat(columnWidths[0]), right = parseFloat(columnWidths[1]);
   var gutter = 100 - left - right;
     
   this.children().css('float', 'left');
